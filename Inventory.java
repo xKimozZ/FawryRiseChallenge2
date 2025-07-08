@@ -1,8 +1,18 @@
 public class Inventory {
     private InventoryItem[] items;
+    private int capacity;
 
     public Inventory(int capacity) {
         items = new InventoryItem[capacity];
+        this.capacity = capacity;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public InventoryItem getItemAtIndex(int index) {
+        return items[index];
     }
 
     public void addProduct(Product product, int quantity) {
